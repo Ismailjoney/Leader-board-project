@@ -7,23 +7,26 @@
     **************************/
 main{
     display:flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     background-color: lightblue;
 }
 .conteiner{
     width:870px;
-    background-color: aliceblue;
-    
+    background-color: aliceblue;    
+    padding:0 30px;
+    margin-bottom: 30px;
+}
+.conteiner:hover{
+    border:2px solid blue;
 }
 .section-tittle{
     font-size: 24px; 
     padding:18px 0;
 }
-.player-tittle{
-    padding-left:13px;
-}
 .top-player{
-    padding:33px 30px;
+    padding:33px 0;
 }
 .players{
     display: grid;
@@ -33,26 +36,25 @@ main{
 .player{
     display: flex;
     align-items: center;
+    margin:10px 0;
 }
 .player img{
     width:56px;
     height:56px;
+    padding-right:15px;
 }
 /*--------------
  Top blog style start here
  --------------------------- ------*/
- .top-blog{
-    padding:33px 30px;
- }
 .blogs{
     display:grid;
     grid-template-columns:repeat(2, 1fr);
-
+    grid-gap:29px 12px;
+    padding-bottom: 50px;
 }
 .blog-item{
     display:flex;
     align-items: center;
-    margin:17px 0;
 }
 .blog-thumnel img{
     width:150px;
@@ -65,9 +67,99 @@ main{
     text-decoration:none;
     font-weight: bold;
 }
-.blog-tittle{
-    padding:7px 0;
+/*-----------------
+latest-course start here
+-----------------------------*/
+.course-heading{
+    margin:20px 0;  
 }
-   
+.latest-course{
+    padding:50px 0;
+}
+.course-info{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:44px 36px;
+}
+.course-tittle img{
+    width:190px;
+    height:90px;
+}
+.course-tittle{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-bottom: 20px;
+}
+/* RESPONSIVE DESIGINE */
+@media only screen and (max-width: 567px){
+    main{
+        display:block;
+    }
+    .conteiner{
+        width:100%;
+    }
+    /* top player section */
+    .section-tittle{
+        font-size: 22px; 
+        padding:18px 0;
+        text-align: center;
+    }
+    .players{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+       
+    }
+    /* top blog section */
+    .blogs{
+        display:grid;
+        grid-template-columns:repeat(1, 1fr);
+        grid-gap:29px;
+        padding-bottom: 50px;
+    
+    }
+     /* latest course section*/
+     .course-heading{
+        margin:20px 0;  
+    }
+    .latest-course{
+        padding:50px 0;
+    }
+    .course-info{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        grid-gap:44px 36px;
+    }
+    .course-tittle img{
+        width:490px;
+        height:290px;
+    }
+    /* common desigine section */
+    hr{
+        display:none
+    }
+    .section-tittle{
+        letter-spacing: 6px;
+        font-weight: 700;
+        font-size: 28px;
+    }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 
